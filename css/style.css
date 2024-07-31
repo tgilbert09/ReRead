@@ -6,14 +6,15 @@
 h1{
 /*font-family: Arial, sans-serif;*/
 font-family: Roboto-Medium; 
-font-size: 4.5em;
-vertical-align:middle;
+font-size: 5em;
+vertical-align:bottom;
+line-height: 0.75em;
 display: inline-block;
 margin: 0 0 0 0.3em;
 }
 
 #ReRead_logo{
-height:64px;
+height:77px;
 display:inline-block;
 vertical-align:middle;
-margin-left: 2em;}
+margin-left: 2.5em;}
