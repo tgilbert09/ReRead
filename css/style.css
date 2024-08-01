@@ -10,11 +10,12 @@ font-size: 5em;
 vertical-align:bottom;
 line-height: 0.75em;
 display: inline-block;
-margin: 0 0 0 0.3em;
+margin: 0 0 6px 0.3em;
 }
 
 #ReRead_logo{
 height:77px;
 display:inline-block;
 vertical-align:middle;
-margin-left: 2.5em;}
+margin-left: 2.5em;
+}
