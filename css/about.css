@@ -1,0 +1,147 @@
+.mission{
+    padding: 5px 25px 25px 25px;
+    background-color: rgb(252, 251, 248);
+}
+
+.mission h2{
+    padding-left: 0.6em;
+    text-indent: -0.6em;
+    font-size: 6vw;
+    min-width: 200px;
+}
+
+.widthLimit{
+    margin: auto;
+    max-width: 400px;
+}
+
+.logoContainer{
+display: flex;
+justify-content: center;
+margin-top: 30px;
+max-width: 384px;
+}
+
+.logoContainer img{
+    height: 12vw;
+    margin: 0 5vw;
+}
+
+.features{
+    text-align: center;
+    padding: 50px 0;
+
+}
+
+.features h2{
+    font-size: 6vw;
+    padding: 0 18px;
+}
+
+.statement{
+    padding: 25px 25px 25px 25px;
+    background-color: rgb(252, 251, 248);
+
+}
+
+.statement p{
+    font-size: 1.4em;
+    max-width: 600px;
+
+}
+
+.howItWorks{
+    background-color: rgb(22, 28, 47);
+    color: white;
+    padding: 25px;
+
+}
+
+
+
+.howItWorks {
+    background-color:  rgb(22, 28, 47);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .textContainer {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .textContainer p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (min-width: 500px) {
+    .mission h2 {
+        font-size: 2em;
+  }
+
+  .logoContainer img{
+    height: 50px;
+    margin: 0 25px;
+}
+
+.logoContainer{
+    margin-top: 40px;
+}
+
+.features h2{
+    font-size: 2em;
+}
+}
+
+@media screen and (min-width: 1016px) {
+
+.mission h2{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 3vw;
+}
+
+.mission::after { 
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+ }
+
+ .mission{
+    padding: 5vw 25px 5vw 25px;
+ }
+
+ .widthLimit{
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .logoContainer{
+    margin-top: 0;
+    margin-left: 7vw;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: none;
+ }
+
+ .logoContainer img{
+    height:6vw;
+ }
+
+
+
+
+}
