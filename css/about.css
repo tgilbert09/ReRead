@@ -1,5 +1,5 @@
 .mission{
-    padding: 5px 25px 25px 25px;
+    padding: 25vw 25px;
     background-color: rgb(252, 251, 248);
 }
 
@@ -29,7 +29,7 @@ max-width: 384px;
 
 .features{
     text-align: center;
-    padding: 50px 0;
+    padding: 15vw 0;
 
 }
 
@@ -39,7 +39,7 @@ max-width: 384px;
 }
 
 .statement{
-    padding: 25px 25px 25px 25px;
+    padding: 25vw 25px;
     background-color: rgb(252, 251, 248);
 
 }
@@ -118,8 +118,16 @@ max-width: 384px;
  }
 
  .mission{
-    padding: 5vw 25px 5vw 25px;
+    padding: 10vw 25px;
  }
+
+ .features{
+    padding: 75px 0;
+}
+
+.statement{
+    padding: 75px 25px;
+}
 
  .widthLimit{
     max-width: none;
