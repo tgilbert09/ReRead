@@ -33,6 +33,7 @@
     margin-top: 30px;
     color: black;
     text-align: center;
+    -webkit-appearance: none;
   }
   
   input[type=submit]:hover {
