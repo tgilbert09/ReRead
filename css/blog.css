@@ -7,6 +7,10 @@
   padding: 50px;
 }
 
+.blog a{
+  color: black;
+}
+
 .blog a:visited{
   color: black;
 }
