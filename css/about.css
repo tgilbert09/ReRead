@@ -1,211 +1,103 @@
-.mission{
-    padding: 5vw 25px 0 25px;
-    background-color: rgb(252, 251, 248);
+.mission {
+    padding: 5vw 0px 0 0px;
     overflow: hidden;
-
 }
 
-.mission h2{
-    padding-left: 0.6em;
-    text-indent: -2em;
+.mission h2 {
     font-size: 6vw;
     text-align: center;
 }
 
-.mission img{
-    width: 80%;
+.mission img {
+    width: 100%;
     margin: auto;
     display: block;
-    margin-bottom: -18%;
+    margin-top: 35px;
 }
 
-.mission a{
+.mission a,
+.features a,
+.howItWorks a {
     display: block;
-    line-height: 35px;
-    margin-bottom: 5px;
+    margin: 35px 0;
 }
-.mission a:hover{
+
+.mission a:hover,
+.features a:hover,
+.howItWorks a:hover {
     text-decoration: underline;
 }
 
-.mission a:visited{
+.mission a:visited,
+.features a:visited,
+.howItWorks a:visited {
     color: blue;
 }
 
-.logoContainer{
-display: flex;
-justify-content: center;
-max-width: 384px;
-margin: auto;
-margin-top: 10vw;
-
-}
-
-.logoContainer img{
-    height: 12vw;
-    margin: 0 5vw;
-}
-
-.features{
+.features {
     text-align: center;
-    padding: 15vw 0;
-
+    padding-top: 5vw;
 }
 
-.features h2{
+.features h2 {
     font-size: 6vw;
     text-align: center;
     margin: 0;
 }
 
-.features p{
-width: 80%;
-margin: auto;
-font-weight: 300;
-margin-top: 10px;
+.features p,
+.howItWorks p {
+    width: 80%;
+    margin: auto;
+    font-weight: 300;
+    margin-top: 10px;
+    max-width: 630px;
 }
-
-.features a{
-    line-height: 50px;
-}
-.features a:hover{
-    text-decoration: underline;
-}
-
-.statement{
-    padding: 25vw 25px;
-    background-color: rgb(252, 251, 248);
-
-}
-
-.statement p{
-    font-size: 1.4em;
-    max-width: 600px;
-
-}
-
-.howItWorks{
-    background-color: rgb(22, 28, 47);
-    color: white;
-    padding: 25px;
-
-}
-
 
 
 .howItWorks {
-    background-color:  rgb(22, 28, 47);
+    background-color: rgb(22, 28, 47);
+    color: white;
+    padding: 25px;
+    background-color: rgb(22, 28, 47);
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-  
-  .textContainer {
+}
+
+.textContainer {
     text-align: center;
     width: 100%;
-  }
-  
-  .textContainer p {
+}
+
+.textContainer p {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 1em;
     margin-top: 0;
-  }
-
-span.icons {
-    font-size: 12vw;
-    font-variation-settings: 'OPSZ' 12vw;
-    color: rgba(156, 107, 38, 0.463);
-    margin: 0 5vw;
-    font-weight: 200;
-  }
- 
-
-@media screen and (min-width: 700px) {
-
-.mission{
-display: flex;
-justify-content: center;
-align-items: center;
 }
 
-
-
-.mission h2{
-    display: inline;
-    font-size: 3vw;
-    padding-left: 0px;
-}
-
-.mission img{
-    width: 30%;
-    margin: 0;
-    display: inline;
-    margin-left: 5%;
-}
-
-.logoContainer{
-    display: inline-block;
-    max-width: none;
-    margin: 0 0 0 5vw;
-    align-content: center;
-
-}
-
-span.icons {
-    font-size: 6vw;
-    font-variation-settings: 'OPSZ' 6vw;
-    margin: 0 3vw;
-  }
-
-.mission::after { 
-    content: " ";
-    display: block; 
-    height: 0; 
-    clear: both;
- }
-
- .mission{
-    padding: 10vw 25px;
- }
-
- .features{
-    padding: 75px 0;
-}
-
-.features p{
-    max-width: 55%;
-}
-
-.features h2{
-    font-size: 3vw;
-}
-
-.statement{
-    padding: 75px 25px;
-}
-
-}
-
-@media screen and (min-width: 1150px) {
-    .mission{
-        padding: 50px 25px 50px 25px;
+@media screen and (min-width: 900px) {
+    .mission {
+        padding: 50px 25px 0 25px;
     }
-    .mission h2{
+
+    .mission h2 {
         font-size: 48px;
     }
 
-    .mission img{
-        width: 370px;
+    .mission img {
+        width: 550px;
     }
 
-    .features h2{
+    .features {
+        padding: 50px 0;
+    }
+
+    .features h2 {
         font-size: 48px;
     }
 
-    .features p{
-        width: 630px;
-    }
 }
