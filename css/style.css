@@ -24,7 +24,7 @@ h2 {
   /*font-family: Arial, sans-serif;*/
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 32px;
 }
 
 p {
@@ -92,11 +92,6 @@ p {
   margin: 13px 0;
 }
 
-.widthLimit {
-  max-width: 800px;
-  width: 100%;
-  margin: auto;
-}
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (min-width: 700px) {

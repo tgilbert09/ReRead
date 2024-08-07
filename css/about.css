@@ -7,19 +7,17 @@
     padding-left: 0.6em;
     text-indent: -0.6em;
     font-size: 6vw;
-    min-width: 200px;
+    text-align: center;
 }
 
-.widthLimit{
-    margin: auto;
-    max-width: 400px;
-}
 
 .logoContainer{
 display: flex;
 justify-content: center;
-margin-top: 30px;
 max-width: 384px;
+margin: auto;
+margin-top: 10vw;
+
 }
 
 .logoContainer img{
@@ -30,7 +28,6 @@ max-width: 384px;
 .features{
     text-align: center;
     padding: 15vw 0;
-
 }
 
 .features h2{
@@ -80,35 +77,41 @@ max-width: 384px;
     margin-top: 0;
   }
 
-
-
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-  @media screen and (min-width: 500px) {
-    .mission h2 {
-        font-size: 2em;
+span.icons {
+    font-size: 12vw;
+    font-variation-settings: 'OPSZ' 12vw;
+    color: rgba(156, 107, 38, 0.463);
+    margin: 0 5vw;
+    font-weight: 200;
   }
+ 
 
-  .logoContainer img{
-    height: 50px;
-    margin: 0 25px;
+@media screen and (min-width: 700px) {
+.widthLimit{
+ display: flex;
+justify-content: center;
+
+
 }
-
-.logoContainer{
-    margin-top: 40px;
-}
-
-.features h2{
-    font-size: 2em;
-}
-}
-
-@media screen and (min-width: 1016px) {
-
 .mission h2{
     display: inline-block;
     vertical-align: middle;
     font-size: 3vw;
 }
+
+.logoContainer{
+    display: inline-block;
+    max-width: none;
+    margin: 0 0 0 5vw;
+    align-content: center;
+
+}
+
+span.icons {
+    font-size: 6vw;
+    font-variation-settings: 'OPSZ' 6vw;
+    margin: 0 3vw;
+  }
 
 .mission::after { 
     content: " ";
@@ -125,31 +128,13 @@ max-width: 384px;
     padding: 75px 0;
 }
 
+.features h2{
+    font-size: 3vw;
+}
+
 .statement{
     padding: 75px 25px;
 }
 
- .widthLimit{
-    max-width: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
- }
-
- .logoContainer{
-    margin-top: 0;
-    margin-left: 7vw;
-    display: inline-block;
-    vertical-align: middle;
-    max-width: none;
- }
-
- .logoContainer img{
-    height:6vw;
- }
-
-
-
-
 }
+

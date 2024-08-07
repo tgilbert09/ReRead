@@ -2,6 +2,10 @@
     background-color: rgb(252, 251, 248);
     padding: 5px 25px 25px 25px;
   }
+
+  .bookRequest h2{
+    min-width: 250px;
+  }
   
   label {
     display: none;
@@ -73,6 +77,12 @@
     margin: 0 15px 10px 15px;
   }
 
+  .widthLimit {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+  }
+
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (min-width: 700px) {
     .bookRequest {
@@ -85,6 +95,6 @@
     }
   
     h2 {
-      font-size: 3em;
+      font-size: 48px;
     }
   }
