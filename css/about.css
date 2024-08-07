@@ -21,6 +21,8 @@
 
 .mission a{
     display: block;
+    line-height: 35px;
+    margin-bottom: 5px;
 }
 .mission a:hover{
     text-decoration: underline;
@@ -125,14 +127,12 @@ justify-content: center;
 align-items: center;
 }
 
-.mission a{
-    display: none;
-}
 
 
 .mission h2{
     display: inline;
     font-size: 3vw;
+    padding-left: 0px;
 }
 
 .mission img{
