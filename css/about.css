@@ -28,6 +28,9 @@
     text-decoration: underline;
 }
 
+.mission a:visited{
+    color: blue;
+}
 
 .logoContainer{
 display: flex;
