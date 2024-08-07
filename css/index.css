@@ -6,6 +6,12 @@
   .bookRequest h2{
     min-width: 250px;
   }
+
+  .bookRequest p{
+    max-width: 300px;
+    margin: 16px auto;
+    font-size: 12px;
+  }
   
   label {
     display: none;

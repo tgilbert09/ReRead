@@ -31,9 +31,14 @@ p {
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 300;
-  max-width: 300px;
-  margin: 16px auto;
-  font-size: 12px;
+
+}
+
+a{
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 #ReRead_logo {

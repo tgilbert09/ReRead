@@ -1,13 +1,29 @@
 .mission{
-    padding: 25vw 25px;
+    padding: 5vw 25px 0 25px;
     background-color: rgb(252, 251, 248);
+    overflow: hidden;
+
 }
 
 .mission h2{
     padding-left: 0.6em;
-    text-indent: -0.6em;
+    text-indent: -2em;
     font-size: 6vw;
     text-align: center;
+}
+
+.mission img{
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-bottom: -18%;
+}
+
+.mission a{
+    display: block;
+}
+.mission a:hover{
+    text-decoration: underline;
 }
 
 
@@ -28,11 +44,26 @@ margin-top: 10vw;
 .features{
     text-align: center;
     padding: 15vw 0;
+
 }
 
 .features h2{
     font-size: 6vw;
     padding: 0 18px;
+    margin-bottom: 2vw;
+}
+
+.features p{
+width: 80%;
+margin: auto;
+font-weight: 300;
+}
+
+.features a{
+    line-height: 50px;
+}
+.features a:hover{
+    text-decoration: underline;
 }
 
 .statement{
@@ -87,16 +118,28 @@ span.icons {
  
 
 @media screen and (min-width: 700px) {
-.widthLimit{
- display: flex;
+
+.mission{
+display: flex;
 justify-content: center;
-
-
+align-items: center;
 }
+
+.mission a{
+    display: none;
+}
+
+
 .mission h2{
-    display: inline-block;
-    vertical-align: middle;
+    display: inline;
     font-size: 3vw;
+}
+
+.mission img{
+    width: 30%;
+    margin: 0;
+    display: inline;
+    margin-left: 5%;
 }
 
 .logoContainer{
@@ -128,6 +171,10 @@ span.icons {
     padding: 75px 0;
 }
 
+.features p{
+    max-width: 55%;
+}
+
 .features h2{
     font-size: 3vw;
 }
@@ -138,3 +185,23 @@ span.icons {
 
 }
 
+@media screen and (min-width: 1150px) {
+    .mission{
+        padding: 50px 25px 50px 25px;
+    }
+    .mission h2{
+        font-size: 48px;
+    }
+
+    .mission img{
+        width: 370px;
+    }
+
+    .features h2{
+        font-size: 48px;
+    }
+
+    .features p{
+        width: 630px;
+    }
+}
