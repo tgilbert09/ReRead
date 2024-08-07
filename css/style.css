@@ -31,7 +31,6 @@ p {
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 300;
-
 }
 
 a{
@@ -95,6 +94,28 @@ a{
   width: 20px;
   height: 2px;
   margin: 13px 0;
+}
+
+.blogContent{
+  padding: 30px 60px;
+  max-width: 650px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: rgb(252, 251, 248);
+}
+
+.blogContent p{
+  text-align: left;
+}
+.blogContent a:hover{
+  text-decoration: underline;
+}
+.blogContent a:visited{
+  color: blue;
 }
 
 

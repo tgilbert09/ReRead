@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReRead</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+
+    <link rel="shortcut icon" type="image/ico" href="../ReRead_icon.png" sizes="any">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+        rel="stylesheet">
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="./index.html"><img id="ReRead_logo" src="../ReRead_logo.png" alt="ReRead's logo">
+            <h1>ReRead</h1>
+        </a>
+        <a href="javascript:void(0);" class='icon' onclick="myFunction()">
+            <div class="line"></div>
+            <div class="line"></div>
+        </a>
+        <div class="split" id="myTopnav">
+            <a href="../index.html">F<span>eature</span>s</a>
+            <a href="../about.html">A<span>bou</span>t</a>
+            <a href="../blog.html">B<span>lo</span>g</a>
+        </div>
+    </div>
+
+    <div class="blogContent">
+        <h1>How ReRead Works</h1>
+        <p>Thanks for your interest in ReRead! ReRead is in its early stages and is still being developed. This means
+            there will be hiccups and hurdles to overcome as we go!<br><br>The technology and business strategy are
+            evolving continuously as we work towards making ReRead a sustainable business. The current workflow is
+            outlined here:</p>
+        <ol>
+            <li><a href="../index.html">Request a book.</a> </li>
+            <li>Our team will search charity shops for your book. This might take some time, but we’re developing new
+                scanning technologies to speed up the process!</li>
+            <li>If we find your book, you will be alerted via email.</li>
+            <li>If you choose to proceed, a £1 reservation fee is required. We will then request the charity shop to
+                reserve the book for you.</li>
+            <li>Collect and enjoy your newly sourced sustainable and charitable book!</li>
+        </ol>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "split") {
+                x.className += " responsive";
+            } else {
+                x.className = "split";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

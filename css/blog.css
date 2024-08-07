@@ -1,21 +1,21 @@
 .blog {
-    background-color:  rgb(22, 28, 47);
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .textContainer {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .textContainer p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 1em;
-    margin-top: 0;
-  }
+  background-color: rgb(252, 251, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+.blog a:visited{
+  color: black;
+}
+
+.blogCard{
+  max-width: 650px;
+  background-color: rgb(229, 241, 135);
+  padding: 25px;
+  margin: 20px 0;
+}
+
+
