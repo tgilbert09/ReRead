@@ -54,14 +54,15 @@ margin-top: 10vw;
 
 .features h2{
     font-size: 6vw;
-    padding: 0 18px;
-    margin-bottom: 2vw;
+    text-align: center;
+    margin: 0;
 }
 
 .features p{
 width: 80%;
 margin: auto;
 font-weight: 300;
+margin-top: 10px;
 }
 
 .features a{
