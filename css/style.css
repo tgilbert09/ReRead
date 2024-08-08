@@ -97,7 +97,7 @@ a{
 }
 
 .blogContent{
-  padding: 30px 60px;
+  padding: 30px 30px;
   max-width: 650px;
   display: flex;
   align-items: center;
@@ -106,6 +106,11 @@ a{
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   background-color: rgb(252, 251, 248);
+}
+
+.blogContent h2{
+    font-size: 6vw;
+    text-align: center;
 }
 
 .blogContent p{
@@ -140,4 +145,9 @@ a{
   .topnav a.icon {
     display: none;
   }
+
+  .blogContent h2{
+    font-size: 32px;
+    text-align: center;
+}
 }
