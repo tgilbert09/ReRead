@@ -1,5 +1,4 @@
 .mission {
-    padding: 5vw 0px 0 0px;
     overflow: hidden;
     text-align: center;
 }
@@ -68,10 +67,6 @@ a:not(.topnav a){
 }
 
 @media screen and (min-width: 900px) {
-    .mission {
-        padding: 50px 25px 0 25px;
-    }
-
     .mission h2 {
         font-size: 48px;
     }
