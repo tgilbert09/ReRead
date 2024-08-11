@@ -1,37 +1,24 @@
 .mission {
     padding: 5vw 0px 0 0px;
     overflow: hidden;
+    text-align: center;
 }
 
 .mission h2 {
     font-size: 6vw;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .mission img {
     width: 100%;
     margin: auto;
     display: block;
-    margin-top: 35px;
 }
 
-.mission a,
-.features a,
-.howItWorks a {
-    display: block;
+a:not(.topnav a){
     margin: 35px 0;
-}
-
-.mission a:hover,
-.features a:hover,
-.howItWorks a:hover {
-    text-decoration: underline;
-}
-
-.mission a:visited,
-.features a:visited,
-.howItWorks a:visited {
-    color: blue;
+    display: inline-block;
 }
 
 .features {

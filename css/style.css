@@ -33,11 +33,19 @@ p {
   font-weight: 300;
 }
 
-a{
-  font-family: "Roboto", sans-serif;
+a {
   text-align: center;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: blue;
 }
 
 #ReRead_logo {

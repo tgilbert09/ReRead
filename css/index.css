@@ -5,6 +5,7 @@
 
   .bookRequest h2{
     min-width: 250px;
+    margin-bottom: 15px;
   }
 
   .bookRequest p{
@@ -12,6 +13,12 @@
     margin: 16px auto;
     font-size: 12px;
   }
+
+  a:not(.topnav a){
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 25px;
+}
   
   label {
     display: none;
