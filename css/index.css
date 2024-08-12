@@ -1,113 +1,86 @@
-.bookRequest {
-    background-color: rgb(252, 251, 248);
-    padding: 5px 25px 25px 25px;
-  }
-
-  .bookRequest h2{
-    min-width: 250px;
-    margin-bottom: 15px;
-  }
-
-  .bookRequest p{
-    max-width: 300px;
-    margin: 16px auto;
-    font-size: 12px;
-  }
-
-  a:not(.topnav a){
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 25px;
+.mission {
+    overflow: hidden;
+    text-align: center;
 }
-  
-  label {
-    display: none;
-  }
-  
-  input[type=text], input[type=email]{
-    width: calc(100% - 10px - 4px);
-    height: 50px;
-    padding-left: 10px;
-    font-size: 20px;
-  }
-  
-  input::placeholder {
-    font-weight: 500;
-  }
-  
-  input[type=submit] {
-    /*font-family: Arial, sans-serif;*/
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 2em;
-    background-color: rgb(229, 241, 135);
-    border: none;
-    width: 140px;
-    height: 80px;
+
+.mission h2 {
+    font-size: 6vw;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.mission img {
+    width: 100%;
     margin: auto;
     display: block;
-    cursor: pointer;
-    margin-top: 30px;
-    color: black;
-  }
-  
-  input[type=submit]:hover {
-    background-color: rgb(175, 241, 131);
-  }
-  
-  .scanningTech {
+}
+
+a:not(.topnav a){
+    margin: 35px 0;
+    display: inline-block;
+}
+
+.features {
+    text-align: center;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+}
+
+.features h2 {
+    font-size: 6vw;
+    text-align: center;
+    margin: 0;
+}
+
+.features p,
+.howItWorks p {
+    width: 80%;
+    margin: auto;
+    font-weight: 300;
+    margin-top: 10px;
+    max-width: 630px;
+}
+
+
+.howItWorks {
     background-color: rgb(22, 28, 47);
     color: white;
-    height: 400px;
+    padding: 25px;
+    background-color: rgb(22, 28, 47);
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-  
-  .library {
-    background-color: rgb(245, 245, 247);
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .textContainer {
+}
+
+.textContainer {
     text-align: center;
     width: 100%;
-  }
-  
-  .textContainer p {
+}
+
+.textContainer p {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 1em;
     margin-top: 0;
-  }
-  
-  .textContainer h2 {
-    margin: 0 15px 10px 15px;
-  }
+}
 
-  .widthLimit {
-    max-width: 800px;
-    width: 100%;
-    margin: auto;
-  }
+@media screen and (min-width: 900px) {
+    .mission h2 {
+        font-size: 48px;
+    }
 
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (min-width: 700px) {
-    .bookRequest {
-      padding: 0 50px;
-      padding-bottom: 25px;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      flex-direction: column;
+    .mission img {
+        width: 550px;
     }
-  
-    h2 {
-      font-size: 48px;
+
+    .features {
+        padding: 50px 0;
     }
-  }
+
+    .features h2 {
+        font-size: 48px;
+    }
+
+}
