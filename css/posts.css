@@ -1,0 +1,52 @@
+.blogContent {
+  padding: 30px 30px;
+  max-width: 650px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: rgb(252, 251, 248);
+}
+
+.blogContent p {
+  text-align: left;
+}
+
+.blogContent a:hover {
+  text-decoration: underline;
+}
+
+.blogContent a:visited {
+  color: blue;
+}
+
+.blogContent img{
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+
+h2{
+  margin: 0;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-size: 6vw;
+  margin-bottom: 8px;
+  margin-top:25px;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (min-width: 700px) {
+
+h3 {
+  font-size: 32px;
+  text-align: center;
+}
+}

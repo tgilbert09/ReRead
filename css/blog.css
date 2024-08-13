@@ -1,23 +1,100 @@
-.blog {
+.posts {
   background-color: rgb(252, 251, 248);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px;
+  padding: 20px 0;
+
 }
 
-.blog a{
+.textContainer{
+  width: 100%;
+}
+
+.subscribe{
+  text-align: center;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+a{
   color: black;
 }
 
-.blog a:visited{
+a:not(.topnav a){
+  text-decoration: none;
+}
+
+a:visited:not(.topnav a:visited){
   color: black;
 }
 
 .blogCard{
-  max-width: 650px;
+  max-width: 420px;
+  background-color: rgb(230, 245, 235);
+  padding: 20px 25px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 20px;
+  transition: transform .2s; /* Animation */
+
+}
+
+.blogCard:hover{
+  transform: scale(1.05);
+}
+
+h2{
+  font-size: 2.5em;
+  margin:0;
+}
+h3{
+  margin: 1px 0;
+  font-size: 32px;
+}
+
+p{
+  margin: 12px 0 0 0;
+}
+
+
+label{
+  display:none;
+}
+
+form{
+  margin-top: 20px;
+}
+
+input[type=text], input[type=email]{
+  width: calc(100% - 10px - 4px);
+  height: 50px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+input::placeholder {
+  font-weight: 500;
+}
+
+input[type=submit] {
+  /*font-family: Arial, sans-serif;*/
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 2em;
   background-color: rgb(229, 241, 135);
-  padding: 25px;
-  margin: 20px 0;
+  border: none;
+  width: 140px;
+  height: 80px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  margin-top: 30px;
+  color: black;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(175, 241, 131);
 }
