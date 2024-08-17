@@ -23,8 +23,9 @@
 }
 
 .blogContent img{
-  width: 80%;
+  width: 100%;
   max-width : 500px;
+  object-fit: contain;
 }
 
 
