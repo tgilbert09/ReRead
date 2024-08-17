@@ -23,8 +23,8 @@
 }
 
 .blogContent img{
-  margin-top: 32px;
-  margin-bottom: 16px;
+  width: 80%;
+  max-width : 500px;
 }
 
 
