@@ -123,10 +123,10 @@
      const bookList = document.getElementById("bookList");
      async function speakToD1() {
         console.log("Running speakToD1.");
-        const url = new URL('/bookdatabase');
-        console.log(url);
+        //const url = new URL('/bookdatabase');
+        //console.log(url);
         console.log("hello?");
-        const response = await fetch(url);
+        const response = await fetch('/bookdatabase');
         console.log("response");
         console.log(response);
         console.log("books");
