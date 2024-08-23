@@ -82,28 +82,6 @@ autocomplete="off">
 <input type="text" placeholder="Search books.." name="search">
 </form>
 <table id="bookList"></table>
-<!-- <table> 
-<tr> 
-<th>Title</th> 
-<th>Author</th> 
-<th>Location</th> 
-</tr> 
-<tr> 
-<td>Harry Potter</td> 
-<td>J. K. Rowling</td> 
-<td>British Heart Foundation - Whiteladies Road</td> 
-</tr> 
-<tr> 
-<td>Jane Eyre</td> 
-<td>Charlotte Brontë</td> 
-<td>Oxfam - Cotham Hill</td> 
-</tr> 
-<tr> 
-<td>Matilda</td> 
-<td>Roald Dahl</td> 
-<td>Oxfam - Park Street</td> 
-</tr>
-</table>  -->
 </div>
 
 
@@ -135,7 +113,7 @@ headers.forEach(headerText => {
 // Append the header row to the table
 bookList.appendChild(headerRow);
 
-async function speakToD1() {
+async function connectToD1() {
 	console.log("Connecting to Cloudflare D1.");
 	const response = await fetch('/request/bookdatabase');
 	const books = await response.json();
@@ -145,31 +123,16 @@ async function speakToD1() {
 			const row = document.createElement('tr');
 
 			headers.forEach(header => {
-			const cell = document.createElement('td');
-			cell.textContent = book[header];
-			row.appendChild(cell)
-			})
+					const cell = document.createElement('td');
+					cell.textContent = book[header];
+					row.appendChild(cell)
+					})
 
 			bookList.appendChild(row);
-})
+			})
 }
 
-speakToD1();
-
-//// Create and append table rows
-//books.forEach(book => {
-//    const row = document.createElement('tr');
-//
-//    // Create and append cells for each column in the row
-//    Object.values(book).forEach(text => {
-//        const cell = document.createElement('td');
-//        cell.textContent = text;
-//        row.appendChild(cell);
-//    });
-//
-//    Append the row to the table
-//    table.appendChild(row);
-// });
+connectToD1();
 
 </script>
 </body>

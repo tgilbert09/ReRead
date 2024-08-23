@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReRead</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/posts.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#fcfbf8" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#fcfbf8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a href="../index.html"
+        ><img
+          id="ReRead_logo"
+          src="../ReReadLogo_Regular.svg"
+          alt="ReRead's logo"
+        />
+        <h1>ReRead</h1>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <div class="line"></div>
+        <div class="line"></div>
+      </a>
+      <div class="split" id="myTopnav">
+        <a href="../index.html">H<span>om</span>e</a>
+        <a href="../request.html">R<span>eques</span>t</a>
+        <a href="../blog.html">B<span>lo</span>g</a>
+      </div>
+    </div>
+
+    <div class="blogContent">
+      <h2>Problems with Scaling the Book Request Model</h2>
+      <p id="author_date">23rd August 2024</p>
+      <p>This post dives into my initial plans for how ReRead could become sustainable as a business - how an income revenue might work. This is required to pay for operational costs, things like databases and paying myself so I don't burn all my savings and become homeless. The initial plan was based on a request model (outlined in <a href="./howReReadWorks.html">how ReRead works</a>). We currently have 4 books on request, scaling the number of books requested to <a href="./ReRead_blog004.html">the original target of 100 books by September 15th</a> seems feasible if I am in the loop. I would be able to go around charity shops getting the books myself, I’d probably buy the book and then arrange a delivery and sell the book to the person at the cost of the charity shop price + the £1 reservation fee.</p>
+
+
+<p>To reach sustainability with a £1 fee, I would need to be delivering at least 2,500 books/month to roughly survive. If I can deliver 5% of all books requested (this might be wildly ambitious - <a href="./ReRead_blog007.html">but who knows?</a>), then I would need 50,000 active book requests/month. Assuming 10 active books requests per customer - that might be 5000 customers which might be possible in Bristol? 467,000 people lived in Bristol in 2019, so that's 1.1% of Bristol. The other problem is the book supply population. How many books are in the charity shops in Bristol? This would make for another good blog post (I think there are at least 10,0000 in the Redland/Clifton/Park Street area alone and probably at least 5 million in the UK). To hit 2,500 books/month in the Redland area alone would result in me shifting somewhere around 25% of the charity bookshop inventory - this assumes 5% of what is requested can be found in the population of around 10,000 books - something that doesn't seem very realistic</p>
+
+But how is this request model scalable nationwide? Without me in the loop, it starts to fall apart due to relying hugely on the time and efforts of the staff and volunteers in the charity shops. These amazing people are already very busy!
+<p>After some thoughts and a <a href="./ReRead_blog004.html">late night blog post</a>. I decided that perhaps this is not going to work at scale.</p>
+
+<p>Here is the reservation process without me in the loop:</p>
+
+<img src="request_workflow.png" alt="Request book workflow">
+
+<p>The above outlines two options, they’re pretty much the same but behave slightly differently..</p>
+
+<p>On the left, you request a book but don’t pay anything up front for your request. Only when the book is scanned by the bookshop do you get a notification on your phone saying it has been found. We could potentially supply you with the book price too. If the bookshop gets live feedback on the ReRead scanning app, they could see which books have been requested and enter the price too. So you have a notification, “Great news! Harry Potter has been found, it’s £3.50, please open the app to pay the £1 fee to reserve the book”. You then maybe see this 3 hours later, and pay the fee. The bookshop then gets notified that someone wants to reserve the book. The book may have gone, or the staff may have rotated etc. but if it all works, the bookshop puts the book in the ReRead reservation pile. You then need to go and pick up the book and pay at the charity shop - hopefully within a reasonable time frame (< 1 week) so managing the ReRead pile in the charity shop does not become a pain for them.</p>
+
+<p>The other option is to pre-load your ReRead account with credits and add books to your reserve list that you are committed to buying (you would be able to add a max price you would be willing to give the charity shop). So you’ve reserved a book, the bookshop is scanning their shelves and hit Harry Potter, it tells the bookshop staff/volunteers that the book has been reserved. They then pull it from the shelf, you get a notification and you go and pick it up (hopefully within a week).</p>
+
+<h3>The problem</h3>
+<p>There are so many steps!!!</p>
+<ol>
+<li>ReRead relies on charity shops to facilitate the customer experience behind ReRead’s primary revenue source - this does not feel like a sensible business decision - what if something goes wrong? Also what is in it for the charity shop? </li>
+<li>Explaining and communicating this complicated multi-stepped book requesting process will be hard - to both the customer who desires a book and the charity bookshop staff/volunteers.</li>
+<li>The time between communications steps ('primary customer -> ReRead -> charity shop staff/volunteer' and back again!) means the chances of the books still being on the shelf diminishes. It would be a terrible customer experience if a requested book (that you have paid £1 to request) is no longer available due to being sold/lost/moved at some point during the multi-step process..</li>
+</ol>
+<p>ReRead’s primary revenue source should not be reliant upon the charity shops and be so fragile. ReRead's mission is to help charity shops, not hinder them or add overheads. ReRead's growth will come from recommendations from customers who have had good experiences with ReRead and who tell their friends. A revenue model that makes sense, and works for all parties, book lovers wanting to find their book, charity shops and ReRead needs to be found. To be continued..</p>
+	  </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "split") {
+          x.className += " responsive";
+        } else {
+          x.className = "split";
+        }
+      }
+    </script>
+  </body>
+</html>
