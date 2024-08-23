@@ -123,19 +123,46 @@
      const bookList = document.getElementById("bookList");
      async function speakToD1() {
         console.log("Running speakToD1.");
-        //const url = new URL('/bookdatabase');
-        //console.log(url);
-        console.log("hello?");
         const response = await fetch('/request/bookdatabase');
         console.log("response");
         console.log(response);
         console.log("books");
         const books = await response.json();
         console.log(books);
-        //console.log(books)
+        return books;
 }
+books = speakToD1();
+
+        // Create the table header row
+const headerRow = document.createElement('tr');
+
+// Create and append header cells
+const headers = ['Title', 'Author', 'Location'];
+headers.forEach(headerText => {
+    const headerCell = document.createElement('th');
+    headerCell.textContent = headerText;
+    headerRow.appendChild(headerCell);
+});
+
+// Append the header row to the table
+bookList.appendChild(headerRow);
 
 
+
+//// Create and append table rows
+//books.forEach(book => {
+//    const row = document.createElement('tr');
+//
+//    // Create and append cells for each column in the row
+//    Object.values(book).forEach(text => {
+//        const cell = document.createElement('td');
+//        cell.textContent = text;
+//        row.appendChild(cell);
+//    });
+//
+//    // Append the row to the table
+//    table.appendChild(row);
+//});
   </script>
 </body>
 
