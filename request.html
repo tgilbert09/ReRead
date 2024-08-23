@@ -74,6 +74,39 @@
   </div>
 
 
+  <div class="browseBooks">
+    <h2>Browse local books!</h2>
+    <p>Below is in development...</p>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search books.." name="search">
+      </form>
+      <table id="bookList"></table>
+     <!-- <table> 
+       <tr> 
+         <th>Title</th> 
+         <th>Author</th> 
+         <th>Location</th> 
+       </tr> 
+       <tr> 
+         <td>Harry Potter</td> 
+         <td>J. K. Rowling</td> 
+         <td>British Heart Foundation - Whiteladies Road</td> 
+       </tr> 
+       <tr> 
+         <td>Jane Eyre</td> 
+         <td>Charlotte Brontë</td> 
+         <td>Oxfam - Cotham Hill</td> 
+       </tr> 
+       <tr> 
+         <td>Matilda</td> 
+         <td>Roald Dahl</td> 
+         <td>Oxfam - Park Street</td> 
+       </tr>
+     </table>  -->
+  </div>
+
+
 
   <script>
     function myFunction() {
@@ -86,6 +119,24 @@
     }
   </script>
 
+  <script>
+     const bookList = document.getElementById("bookList");
+     async function speakToD1() {
+        console.log("Running speakToD1.");
+        const url = new URL('/bookdatabase');
+        console.log(url);
+        console.log("hello?");
+        const response = await fetch(url);
+        console.log("response");
+        console.log(response);
+        console.log("books");
+        const books = await response.json();
+        console.log(books);
+        //console.log(books)
+}
+
+
+  </script>
 </body>
 
 </html>
