@@ -6,10 +6,12 @@
 body {
   overflow-x: hidden;
 }
+h1, h2, h3, h4, p, a{
+  font-family: "Roboto", sans-serif;
+}
 
 h1 {
   /*font-family: Arial, sans-serif;*/
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 3em;
@@ -21,21 +23,26 @@ h1 {
 
 
 h2 {
-  /*font-family: Arial, sans-serif;*/
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 32px;
 }
 
+h3{
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 300;
+  margin: 0;
+}
+
 p {
-  font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 300;
 }
 
 a {
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-decoration: none;
 }

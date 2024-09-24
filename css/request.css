@@ -17,9 +17,13 @@
   a:not(.topnav a){
     display: inline-block;
     text-align: left;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
 }
-  
+
+form{
+    margin-top: 25px;
+}
+
   label {
     display: none;
   }
@@ -96,6 +100,33 @@
     margin: auto;
   }
 
+.book:not(:last-of-type){
+  border-bottom: 2px solid rgb(210, 210, 210);
+}
+
+.book{
+  display:flex;
+  align-items:top;
+  max-width: 1000px;
+  margin: 10px auto 10px auto;
+  margin: auto;
+}
+
+.book h2{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.book a{
+  margin-bottom: 5px;
+}
+
+.book img {
+  height: 260px;
+  width: 173px;
+  object-fit:contain;
+  margin: 20px 20px 20px 0;
+}
 
   table {
     font-family: arial, sans-serif;

@@ -98,6 +98,26 @@ function myFunction() {
 </script>
 
 <script>
+function timeAgo(dateString) {
+    const now = new Date();
+    const pastDate = new Date(dateString);
+    const diffInMs = now - pastDate; // Difference in milliseconds
+    const diffInSeconds = Math.floor(diffInMs / 1000); // Difference in seconds
+    const diffInMinutes = Math.floor(diffInSeconds / 60);
+    const diffInHours = Math.floor(diffInMinutes / 60);
+    const diffInDays = Math.floor(diffInHours / 24);
+
+    if (diffInSeconds < 60) {
+        return "a moment ago";
+    } else if (diffInMinutes < 60) {
+        return diffInMinutes + " minute" + (diffInMinutes === 1 ? "" : "s") + " ago";
+    } else if (diffInHours < 24) {
+        return diffInHours + " hour" + (diffInHours === 1 ? "" : "s") + " ago";
+    } else {
+        return diffInDays + " day" + (diffInDays === 1 ? "" : "s") + " ago";
+    }
+}
+
 const bookList = document.getElementById("bookList");
 // Create the table header row
 const headerRow = document.createElement('tr');
@@ -114,23 +134,68 @@ headers.forEach(headerText => {
 bookList.appendChild(headerRow);
 
 async function connectToD1() {
-	console.log("Connecting to Cloudflare D1.");
-	const response = await fetch('/request/bookdatabase');
-	const books = await response.json();
+    console.log("Connecting to Cloudflare D1.");
+    const response = await fetch('/request/bookdatabase');
+    const books = await response.json();
 
-	// Create and append table rows
-	books.forEach(book => {
-			const row = document.createElement('tr');
+    // Create and append table rows
+    books.forEach(book => {
+        const row = document.createElement('tr');
 
-			headers.forEach(header => {
-					const cell = document.createElement('td');
-					cell.textContent = book[header];
-					row.appendChild(cell)
-					})
+        headers.forEach(header => {
+            const cell = document.createElement('td');
+            cell.textContent = book[header];
+            row.appendChild(cell);
+            })
 
-			bookList.appendChild(row);
-			})
-}
+        bookList.appendChild(row);
+        })
+
+    // Get the parent node
+    var parentNode = document.querySelector('body');
+
+    books.forEach(book => {
+        const bookDiv = document.createElement('div');
+        bookDiv.setAttribute("id", "bookId=" + book["BookId"]);
+        bookDiv.setAttribute("class", "book");
+
+        const bookInfo = document.createElement('div');
+
+        const bookTitle = document.createElement('h2');
+        bookTitle.textContent = book["Title"];
+        bookInfo.appendChild(bookTitle);
+
+        const bookAuthor = document.createElement('h3');
+        bookAuthor.textContent = "By " + book["Author"];
+        bookInfo.appendChild(bookAuthor);
+
+        const bookLocation = document.createElement('a');
+        let bookLocationString = '';
+        if (book["Location"] === '4PYLziyxT1ASxtRSA'){
+            bookLocationString = 'British Heart Foundation - Whiteladies Road';
+        } else {
+            bookLocationString = book['Location'];
+        }
+        bookLocation.setAttribute("href", "https://maps.app.goo.gl/" + book["Location"]);
+        bookLocation.setAttribute("target", "_blank");
+        bookLocation.textContent = "From " + bookLocationString;
+        bookInfo.appendChild(bookLocation);
+
+        const bookScanInfo = document.createElement('h4');
+        bookScanInfo.textContent = 'Scanned "' + book["ScannedText"] + '" ' + timeAgo(book["DateTimeScanned"]);
+        bookInfo.appendChild(bookScanInfo);
+
+        imageUrl = "https://re-read.co.uk/request/bookdatabase/image?bookId=" + book["BookId"];
+        const imgElement = document.createElement('img');
+        imgElement.src = imageUrl;
+        imgElement.alt = "Fetched Image";
+
+        bookDiv.appendChild(imgElement);
+        bookDiv.appendChild(bookInfo);
+
+        parentNode.appendChild(bookDiv);
+	});
+};
 
 connectToD1();
 
