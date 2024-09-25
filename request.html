@@ -182,7 +182,7 @@ async function connectToD1() {
         bookInfo.appendChild(bookLocation);
 
         const bookScanInfo = document.createElement('h4');
-        bookScanInfo.textContent = 'Scanned "' + book["ScannedText"] + '" ' + timeAgo(book["DateTimeScanned"]);
+        bookScanInfo.textContent = 'Scanned ' + timeAgo(book["DateTimeScanned"]);
         bookInfo.appendChild(bookScanInfo);
 
         imageUrl = "https://re-read.co.uk/request/bookdatabase/image?bookId=" + book["BookId"];
