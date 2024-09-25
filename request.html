@@ -185,10 +185,16 @@ async function connectToD1() {
         bookScanInfo.textContent = 'Scanned ' + timeAgo(book["DateTimeScanned"]);
         bookInfo.appendChild(bookScanInfo);
 
+        const googleBooksLink = document.createElement('a');
+        googleBooksLink.setAttribute("href", "https://www.google.co.uk/books/edition/_/" + book["GBooksId"]);
+        googleBooksLink.setAttribute("target", "_blank");
+        googleBooksLink.textContent = "Google Books >";
+        bookInfo.appendChild(googleBooksLink);
+
         imageUrl = "https://re-read.co.uk/request/bookdatabase/image?bookId=" + book["BookId"];
         const imgElement = document.createElement('img');
         imgElement.src = imageUrl;
-        imgElement.alt = "Fetched Image";
+        imgElement.alt = book["ScannedText"];
 
         bookDiv.appendChild(imgElement);
         bookDiv.appendChild(bookInfo);
