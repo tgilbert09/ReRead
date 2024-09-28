@@ -173,6 +173,8 @@ async function connectToD1() {
         let bookLocationString = '';
         if (book["Location"] === '4PYLziyxT1ASxtRSA'){
             bookLocationString = 'British Heart Foundation - Whiteladies Road';
+        } else if (book["Location"] === 'ECwQXoWCDUHGarRz5') {
+            bookLocationString = 'Oxfam - Cotham Hill';
         } else {
             bookLocationString = book['Location'];
         }
