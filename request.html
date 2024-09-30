@@ -82,7 +82,6 @@ autocomplete="off">
 <input type="text" id="search-input" placeholder="Search books.." name="search">
 <button type="submit">Search</button>
 </form>
-<table id="bookList"></table>
 </div>
 
 
@@ -120,7 +119,6 @@ function timeAgo(dateString) {
 }
 
 async function connectToD1(searchValue="") {
-    console.log(searchValue)
     let searchQuery = '/request/bookdatabase'
     if (searchValue) {
       searchQuery = '/request/bookdatabase/?search=' + searchValue;
@@ -137,6 +135,16 @@ async function connectToD1(searchValue="") {
     booksDivs.forEach(bookDiv => {
       bookDiv.remove();
     });
+
+console.log(books)
+    if (books === undefined || books.length == 0) {
+    // array does not exist or is empty
+        const bookDiv = document.createElement('h3');
+        bookDiv.setAttribute("class", "book");
+        bookDiv.textContent = "No results found - check back again soon or request a book!";
+        parentNode.appendChild(bookDiv)
+        return
+    }
 
     books.forEach(book => {
         const bookDiv = document.createElement('div');
