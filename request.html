@@ -78,8 +78,9 @@ autocomplete="off">
 <h2>Browse local books!</h2>
 <p>Below is in development...</p>
 <div class="search-container">
-<form action="/action_page.php">
-<input type="text" placeholder="Search books.." name="search">
+<form id="search-form">
+<input type="text" id="search-input" placeholder="Search books.." name="search">
+<button type="submit">Search</button>
 </form>
 <table id="bookList"></table>
 </div>
@@ -118,41 +119,24 @@ function timeAgo(dateString) {
     }
 }
 
-// const bookList = document.getElementById("bookList");
-// // Create the table header row
-// const headerRow = document.createElement('tr');
-// 
-// // Create and append header cells
-// const headers = ['Title', 'Author', 'Location'];
-// headers.forEach(headerText => {
-// 		const headerCell = document.createElement('th');
-// 		headerCell.textContent = headerText;
-// 		headerRow.appendChild(headerCell);
-// 		});
-// 
-// // Append the header row to the table
-// bookList.appendChild(headerRow);
-
-async function connectToD1() {
-    console.log("Connecting to Cloudflare D1.");
-    const response = await fetch('/request/bookdatabase');
+async function connectToD1(searchValue="") {
+    console.log(searchValue)
+    let searchQuery = '/request/bookdatabase'
+    if (searchValue) {
+      searchQuery = '/request/bookdatabase/?search=' + searchValue;
+    }
+    console.log("Connecting to Cloudflare D1." + searchQuery);
+    const response = await fetch(searchQuery);
     const books = await response.json();
 
-//     // Create and append table rows
-//     books.forEach(book => {
-//         const row = document.createElement('tr');
-// 
-//         headers.forEach(header => {
-//             const cell = document.createElement('td');
-//             cell.textContent = book[header];
-//             row.appendChild(cell);
-//             })
-// 
-//         bookList.appendChild(row);
-//         })
-// 
     // Get the parent node
     var parentNode = document.querySelector('body');
+    
+    // Reset books shown
+    const booksDivs = document.querySelectorAll('.book');
+    booksDivs.forEach(bookDiv => {
+      bookDiv.remove();
+    });
 
     books.forEach(book => {
         const bookDiv = document.createElement('div');
@@ -166,8 +150,34 @@ async function connectToD1() {
         bookInfo.appendChild(bookTitle);
 
         const bookAuthor = document.createElement('h3');
-        bookAuthor.textContent = "By " + book["Author"];
+        bookAuthor.textContent = book["Author"];
         bookInfo.appendChild(bookAuthor);
+
+
+        const scannedText = document.createElement('h4');
+        if (!book["Title"] && !book["Author"]){
+            scannedText.textContent = book["ScannedText"];
+        }
+        bookInfo.appendChild(scannedText);
+        
+        // Highlight matching text
+        if (searchValue) {
+          const regex = new RegExp(`(${searchValue})`, 'gi'); // Create a regex for case-insensitive matching
+          const highlightedTitleText = bookTitle.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+          bookTitle.innerHTML = highlightedTitleText; // Update the text with highlights
+          const highlightedAuthorText = bookAuthor.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+          bookAuthor.innerHTML = highlightedAuthorText; // Update the text with highlights
+          const highlightedScannedText = scannedText.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+          scannedText.innerHTML = highlightedScannedText; // Update the text with highlights
+        }
+
+        if (book["Author"]){
+          bookAuthor.innerHTML = "By " + bookAuthor.innerHTML;
+        }
+
+        if (!book["Title"] && !book["Author"]){
+            scannedText.innerHTML = "SCANNED TEXT: " + scannedText.innerHTML + "<br><br>";
+        }
 
         const bookLocation = document.createElement('a');
         let bookLocationString = '';
@@ -204,6 +214,23 @@ async function connectToD1() {
         parentNode.appendChild(bookDiv);
 	});
 };
+
+document.getElementById('search-form').addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  const searchValue = document.getElementById('search-input').value
+
+  // Get the value of the search input
+  if (searchValue) {
+      //const searchQuery = '/request/bookdatabase/?search=' + searchValue;
+      //console.log(searchQuery)
+
+      connectToD1(searchValue);
+  }
+  else {
+      connectToD1();
+  }
+})
 
 connectToD1();
 

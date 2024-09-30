@@ -118,6 +118,9 @@ a:visited {
   margin: 0;
   }
 
+.highlight {
+  background-color: yellow; /* Change this to your preferred highlight color */
+}
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (min-width: 700px) {
