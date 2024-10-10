@@ -1,85 +1,144 @@
 .mission {
-    overflow: hidden;
-    text-align: center;
+  overflow: hidden;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 6vw;
 }
 
 .mission h2 {
-    font-size: 6vw;
-    text-align: center;
-    margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
+.demonstrations-container {
+  background-color: rgb(252, 251, 248);
+  width: 100%;
+}
+
+.demonstrations {
+  padding: 5px 0 5px 0;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.content-container h2 {
+  font-size: 6vw;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.demonstrations p,
+h3,
+img {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 .mission img {
-    width: 100%;
-    margin: auto;
-    display: block;
-    margin-top: 8px;
+  width: 100%;
+  margin: auto;
+  display: block;
+  margin-top: 8px;
 }
 
-a:not(.topnav a){
-    margin: 18px 0;
-    display: inline-block;
+a:not(.topnav a) {
+  margin: 18px 0;
+  display: inline-block;
 }
 
 .features {
-    text-align: center;
-    padding-top: 10vw;
-    padding-bottom: 5vw;
+  text-align: center;
+  padding-bottom: 5vw;
+  margin-top: 25px;
 }
 
 .features h2 {
-    font-size: 6vw;
-    text-align: center;
-    margin: 0;
+  margin-bottom: 5px;
 }
 
 .features p,
 .howItWorks p {
-    width: 80%;
-    margin: auto;
-    font-weight: 300;
-    margin-top: 10px;
-    max-width: 410px;
+  width: 80%;
+  margin: auto;
+  font-weight: 300;
+  margin-top: 10px;
+  max-width: 410px;
 }
 
 .howItWorks {
-    background-color: rgb(22, 28, 47);
-    color: white;
-    padding: 25px;
-    background-color: rgb(22, 28, 47);
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  background-color: rgb(22, 28, 47);
+  color: white;
+  padding: 25px;
+  background-color: rgb(22, 28, 47);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .textContainer {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .textContainer p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 1em;
-    margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: 0;
 }
 
+.content-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+#pause-button {
+  display: block;
+  margin: 20px auto;
+  color: grey;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+#pause-button:hover {
+}
+
+.demonstrations img {
+  height: 200px;
+}
+
+.demonstrations p {
+  margin-top: 0;
+}
+.demonstrations h3 {
+  margin-bottom: 0;
+}
+.demonstrations h2 {
+  margin-bottom: 0;
+  margin-top: 20;
+}
+input::placeholder {
+  color: rgb(45, 45, 45);
+}
+input.faded::placeholder {
+  opacity: 0; /* Default opacity */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for changes */
+}
+
+
 @media screen and (min-width: 900px) {
-    .mission h2 {
-        font-size: 48px;
-    }
+  h2 {
+    font-size: 48px;
+  }
 
-    .mission img {
-        width: 550px;
-    }
-
-    .features {
-        padding: 50px 0;
-    }
-
-    .features h2 {
-        font-size: 48px;
-    }
+  .mission img {
+    width: 550px;
+  }
 }

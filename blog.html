@@ -1,141 +1,200 @@
 <!doctype html>
 <html class="no-js" lang="">
+  <head>
+    <!-- COMMON HEAD START -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReRead</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReRead</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/blog.css">
-  <meta name="description" content="">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fcfbf8" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#fcfbf8">
-  <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="theme-color" content="#fcfbf8">
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#fcfbf8" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
 
-  <meta name="theme-color" content="#fafafa">
-</head>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <!-- COMMON HEAD END -->
 
-<body>
-  <div class="topnav">
-    <a href="./index.html"><img id="ReRead_logo" src="./ReReadLogo_Regular.svg" alt="ReRead's logo">
-      <h1>ReRead</h1>
-    </a>
-    <a href="javascript:void(0);" class='icon' onclick="myFunction()">
-      <div class="line"></div>
-      <div class="line"></div>
-    </a>
-    <div class="split" id="myTopnav">
-      <a href="./index.html">H<span>om</span>e</a>
-      <a href="./request.html">L<span>ibrar</span>y</a>
-      <a href="./blog.html">B<span>lo</span>g</a>
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR START -->
+    <div class="topnav">
+      <a href="/index.html">
+        <img
+          id="ReRead_logo"
+          src="/ReReadLogo_Regular.svg"
+          alt="ReRead's logo"
+        />
+        <h1>ReRead</h1>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <div class="line"></div>
+        <div class="line"></div>
+      </a>
+      <div class="split" id="myTopnav">
+        <a href="/index.html">H<span>om</span>e</a>
+        <a href="/blog.html">B<span>lo</span>g</a>
+        <a href="/account.html"><div id="signIn">A<span>ccoun</span>t</div></a>
+      </div>
     </div>
-  </div>
+    <script src="/navbar_script.js"></script>
+    <!-- NAVBAR END -->
 
-  <div class="posts">
-    <div class="textContainer">
-      <h2>Pinned 📌</h2>
-      <a href="./blogs/ReReadMission.html">
-        <div class="blogCard">
-          <h3>ReRead's Mission</h3>
-          <p id="author_date">8th August 2024</p>
-          <p>Explore ReRead's mission to blend technology and charity bookshops to
-            offer a meaningful sustainable alternative to mainstream book buying.</p>
-        </div>
-      </a>
+    <div class="posts">
+      <div class="textContainer">
+        <h2>Pinned 📌</h2>
+        <a href="./blogs/ReReadMission.html">
+          <div class="blogCard">
+            <h3>ReRead's Mission</h3>
+            <p id="author_date">8th August 2024</p>
+            <p>
+              Explore ReRead's mission to blend technology and charity bookshops
+              to offer a meaningful sustainable alternative to mainstream book
+              buying.
+            </p>
+          </div>
+        </a>
 
-
-      <a href="./blogs/howReReadWorks.html">
-        <div class="blogCard">
-          <h3>How ReRead Works</h3>
-          <p id="author_date">8th August 2024</p>
-          <p>Discover how ReRead works to connect you with sustainable books from local charity bookshops.</p>
-        </div>
-      </a>
+        <a href="./blogs/howReReadWorks.html">
+          <div class="blogCard">
+            <h3>How ReRead Works</h3>
+            <p id="author_date">8th August 2024</p>
+            <p>
+              Discover how ReRead works to connect you with sustainable books
+              from local charity bookshops.
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="subscribe">
-    <h2>Subscribe to receive the latest blog posts.</h2>
-    <form
-    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJJWwqKrAnvfmko54DTR8L2ZNdf92zSwt7qZLAll0ptAfdZw/formResponse"
-    autocomplete="on">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="entry.27908978" placeholder="Email"><br>
-    <br>
-    <input type="submit" value="Send">
-  </form>
-  </div>
+    <div class="subscribe">
+      <h2>Subscribe to receive the latest blog posts.</h2>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJJWwqKrAnvfmko54DTR8L2ZNdf92zSwt7qZLAll0ptAfdZw/formResponse"
+        autocomplete="on"
+      >
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="entry.27908978"
+          placeholder="Email"
+        /><br />
+        <br />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
 
-  <div class="posts">
-    <div class="textContainer">
-      <h2>Posts</h2>
+    <div class="posts">
+      <div class="textContainer">
+        <h2>Posts</h2>
 
-      <a href="./blogs/ReRead_blog009.html">
-        <div class="blogCard">
-          <h3>Searching for Partnerships</h3>
-          <p id="author_date">30th September 2024</p>
-          <p>Learn more about ReRead's plans to partner with charities for feedback and growth.</p>
-        </div>
-      </a>
+        <a href="/blogs/PrivacyPolicy">
+          <div class="blogCard">
+            <h3>Privacy Policy for ReRead</h3>
+            <p id="author_date">10th October 2024</p>
+            <p>Read about ReRead's Privacy Policy.</p>
+          </div>
+        </a>
 
-      <a href="./blogs/ReRead_blog008.html">
-        <div class="blogCard">
-          <h3>Prototype done!</h3>
-          <p id="author_date">25th September 2024</p>
-          <p>ReRead launches its charity shop book library! Check out the prototype and discover more about the development journey.</p>
-        </div>
-      </a>
+        <a href="/blogs/TermsAndConditions">
+          <div class="blogCard">
+            <h3>Terms and Conditions for ReRead</h3>
+            <p id="author_date">10th October 2024</p>
+            <p>Read about ReRead's Terms and Conditions.</p>
+          </div>
+        </a>
 
-      <a href="./blogs/ReRead_blog006.html">
-        <div class="blogCard">
-          <h3>Problems with Scaling the Book Request Model</h3>
-          <p id="author_date">23rd August 2024</p>
-          <p>Discover why scaling the ReRead book request model might be unfeasible, as this post examines the logistical challenges and the reliance on charity shops.</p>
-        </div>
-      </a>
+        <a href="./blogs/ReRead_blog009.html">
+          <div class="blogCard">
+            <h3>Searching for Partnerships</h3>
+            <p id="author_date">30th September 2024</p>
+            <p>
+              Learn more about ReRead's plans to partner with charities for
+              feedback and growth.
+            </p>
+          </div>
+        </a>
 
-      <a href="./blogs/ReRead_blog005.html">
-        <div class="blogCard">
-          <h3>Measuring ReRead's Growth - Tech Blog</h3>
-          <p id="author_date">20th August 2024</p>
-          <p>How ReRead should should measure website traffic. A Raspberry Pi or 3rd party analytics?</p>
-        </div>
-      </a>
+        <a href="./blogs/ReRead_blog008.html">
+          <div class="blogCard">
+            <h3>Prototype done!</h3>
+            <p id="author_date">25th September 2024</p>
+            <p>
+              ReRead launches its charity shop book library! Check out the
+              prototype and discover more about the development journey.
+            </p>
+          </div>
+        </a>
 
-      <a href="./blogs/ReRead_blog004.html">
-        <div class="blogCard">
-          <h3>ReRead's Plan to 100 Book Requests</h3>
-          <p id="author_date">19th August 2024</p>
-          <p>ReRead concept testing - evaluating key business assumptions with minimal resources.</p>
-        </div>
-      </a>
+        <a href="./blogs/ReRead_blog006.html">
+          <div class="blogCard">
+            <h3>Problems with Scaling the Book Request Model</h3>
+            <p id="author_date">23rd August 2024</p>
+            <p>
+              Discover why scaling the ReRead book request model might be
+              unfeasible, as this post examines the logistical challenges and
+              the reliance on charity shops.
+            </p>
+          </div>
+        </a>
 
-      <a href="./blogs/ReReadPosters_01.html">
-        <div class="blogCard">
-          <h3>ReRead's First Posters</h3>
-          <p id="author_date">17th August 2024</p>
-          <p>Discover how ReRead is searching for early adopters to join our mission with our first generation of posters, now displayed in Redland's charity shops.</p>
-        </div>
-      </a>
+        <a href="./blogs/ReRead_blog005.html">
+          <div class="blogCard">
+            <h3>Measuring ReRead's Growth - Tech Blog</h3>
+            <p id="author_date">20th August 2024</p>
+            <p>
+              How ReRead should should measure website traffic. A Raspberry Pi
+              or 3rd party analytics?
+            </p>
+          </div>
+        </a>
 
-      <!--
+        <a href="./blogs/ReRead_blog004.html">
+          <div class="blogCard">
+            <h3>ReRead's Plan to 100 Book Requests</h3>
+            <p id="author_date">19th August 2024</p>
+            <p>
+              ReRead concept testing - evaluating key business assumptions with
+              minimal resources.
+            </p>
+          </div>
+        </a>
+
+        <a href="./blogs/ReReadPosters_01.html">
+          <div class="blogCard">
+            <h3>ReRead's First Posters</h3>
+            <p id="author_date">17th August 2024</p>
+            <p>
+              Discover how ReRead is searching for early adopters to join our
+              mission with our first generation of posters, now displayed in
+              Redland's charity shops.
+            </p>
+          </div>
+        </a>
+
+        <!--
 
       <a href="./blogs/ReReadLogo.html">
         <div class="blogCard">
@@ -145,23 +204,18 @@
         </div>
       </a>
     -->
-
-
+      </div>
     </div>
-  </div>
 
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "split") {
-        x.className += " responsive";
-      } else {
-        x.className = "split";
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "split") {
+          x.className += " responsive";
+        } else {
+          x.className = "split";
+        }
       }
-    }
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>

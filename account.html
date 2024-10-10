@@ -32,7 +32,17 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <!-- COMMON HEAD END -->
-    <link rel="stylesheet" href="/css/posts.css" />
+
+    <link rel="stylesheet" href="css/account.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
+    />
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
   </head>
 
   <body>
@@ -59,43 +69,53 @@
     <script src="/navbar_script.js"></script>
     <!-- NAVBAR END -->
 
-    <div class="blogContent">
-      <h2>Prototype done!</h2>
-      <p id="author_date">25th September 2024</p>
+    <div class="width-limit">
+      <div id="firebaseui-auth-container" class="display-if-signed-out"></div>
+      <div id="loader">Loading...</div>
+      <div
+        id="welcome-message"
+        style="display: none"
+        class="display-if-signed-in"
+      ></div>
+      <div id="user-status" class="display-if-signed-in"></div>
+      <h2 class="display-if-signed-in" id="subscribed-title">Subscription</h2>
+      <div id="user-subscription-status" class="display-if-signed-in"></div>
+      <h2 class="display-if-signed-in" id="wishlist-title">Wishlist</h2>
+      <a
+        href="#search-input"
+        class="display-if-signed-in"
+        id="add-to-wishlist-link"
+        >Add books to Wishlist ></a
+      >
+      <div
+        id="wishlist"
+        style="display: none"
+        class="display-if-signed-in"
+      ></div>
+      <div id="wishlist-container" class="display-if-signed-in"></div>
 
-      <p>
-        Two nights ago, on 23rd September, ReRead launched the "Library” of
-        charity shop books!! 🎉🎉🎉 Here’s what it looks like!
-      </p>
+      <div
+        class="container display-if-signed-in"
+        id="add-to-wishlist-container"
+      >
+        <h3>Add books to Wishlist</h3>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for books..."
+        />
+        <button id="search-button">Search</button>
 
-      <img src="library_v1.jpg" />
+        <div id="results"></div>
+      </div>
 
-      <p>
-        While developing the back end, I used the same photo over and over
-        again. I’ve seen “Gerald Brenan, the Interior Castle” so many times now
-        😵‍💫. For some reason, Mask R-CNN (the machine learning model I am using
-        to detect and cut out books) always picked this book first, and now it’s
-        the first book on the website too!
-      </p>
-
-      <img src="first_image_scanned.jpg" />
-
-      <p>
-        There are many features still missing from the website, like a working
-        search bar - these will be coming soon! :)
-      </p>
-      <p>
-        It's been a while since my last blog post, but during that time, I’ve
-        learnt tons. I've been diving into Python, Javascript, Cloudflare (R1,
-        D1, Images), SQL databases, machine learning (PyTorch, Segment Anything
-        2, Mask R-CNN, text recognition) and even dabbling in a bit of Swift!
-        I’m having an amazing time and don’t want this to stop.
-      </p>
-
-      <p>
-        Next up.. I need to figure out a revenue model for ReRead so I can keep
-        this going long-term.
-      </p>
+      <h2 class="display-if-signed-in" id="account-title">Account</h2>
+      <button id="sign-out-btn" class="display-if-signed-in">Sign out</button>
+      <button id="delete-account-btn" class="display-if-signed-in">
+        Delete Account
+      </button>
     </div>
+
+    <script src="account.js"></script>
   </body>
 </html>

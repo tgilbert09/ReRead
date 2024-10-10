@@ -6,7 +6,12 @@
 body {
   overflow-x: hidden;
 }
-h1, h2, h3, h4, p, a{
+h1,
+h2,
+h3,
+h4,
+p,
+a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -21,13 +26,12 @@ h1 {
   color: black;
 }
 
-
 h2 {
   font-weight: 500;
   font-size: 32px;
 }
 
-h3{
+h3 {
   font-weight: 500;
 }
 
@@ -91,7 +95,7 @@ a:visited {
   font-size: 30px;
 }
 
-.split a:hover span {
+.split a:hover span:not(.material-symbols-outlined) {
   text-decoration: underline;
   text-underline-offset: 9px;
   text-decoration-skip-ink: none;
@@ -112,18 +116,59 @@ a:visited {
   margin: 13px 0;
 }
 
-#author_date{
+#author_date {
   text-align: center;
   font-style: italic;
   margin: 0;
-  }
+}
 
 .highlight {
   background-color: yellow; /* Change this to your preferred highlight color */
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (min-width: 700px) {
+input[type="search"] {
+  padding-left: 5px;
+}
+
+/* Container for the input and button */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  width: 70%;
+  min-width: 282px;
+}
+
+/* Style for the input field */
+.search-container input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px; /* Rounded corners only on left side */
+  outline: none;
+  height: 52px;
+}
+
+/* Style for the search button */
+.search-container button {
+  height: 52px;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 4px 4px 0; /* Rounded corners only on right side */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Button hover effect */
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 770px) {
   .split {
     display: block;
     float: right;
@@ -144,7 +189,9 @@ a:visited {
     display: none;
   }
 
- 
+  .material-symbols-outlined {
+    display: inline-block;
+  }
 
   #ReRead_logo {
     margin-left: 1.5em;

@@ -1,157 +1,174 @@
 <!doctype html>
 <html class="no-js" lang="">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- COMMON HEAD START -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ReRead</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/posts.css">
-    <meta name="description" content="">
 
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <meta property="og:image:alt" content="">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-    <link rel="manifest" href="../site.webmanifest">
-    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#fcfbf8">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="theme-color" content="#fcfbf8">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
-        rel="stylesheet">
-    <meta name="theme-color" content="#fafafa">
-</head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fcfbf8" />
 
-<body>
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#fcfbf8" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <!-- COMMON HEAD END -->
+    <link rel="stylesheet" href="/css/posts.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR START -->
     <div class="topnav">
-        <a href="../index.html"><img id="ReRead_logo" src="../ReReadLogo_Regular.svg" alt="ReRead's logo">
-            <h1>ReRead</h1>
-        </a>
-        <a href="javascript:void(0);" class='icon' onclick="myFunction()">
-            <div class="line"></div>
-            <div class="line"></div>
-        </a>
-        <div class="split" id="myTopnav">
-            <a href="../index.html">H<span>om</span>e</a>
-            <a href="../request.html">L<span>ibrar</span>y</a>
-            <a href="../blog.html">B<span>lo</span>g</a>
-        </div>
+      <a href="/index.html">
+        <img
+          id="ReRead_logo"
+          src="/ReReadLogo_Regular.svg"
+          alt="ReRead's logo"
+        />
+        <h1>ReRead</h1>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <div class="line"></div>
+        <div class="line"></div>
+      </a>
+      <div class="split" id="myTopnav">
+        <a href="/index.html">H<span>om</span>e</a>
+        <a href="/blog.html">B<span>lo</span>g</a>
+        <a href="/account.html"><div id="signIn">A<span>ccoun</span>t</div></a>
+      </div>
     </div>
+    <script src="/navbar_script.js"></script>
+    <!-- NAVBAR END -->
 
     <div class="blogContent">
+      <h2>ReRead's Plan to 100 Book Requests</h2>
+      <p id="author_date">19th August 2024</p>
+      <p>
+        This blog post was written after an existential ReRead crisis but I
+        wanted to record where my mind was at pre-19th August. It’s written in
+        the present tense as if it were still the plan. Also as a side note, I’m
+        thinking about posting blog posts more frequently - to do this I’m going
+        to proofread less - so things may not make sense or flow as well. Open
+        to thoughts and feedback (through any of ReRead’s social media).
+      </p>
 
+      <h3>The short term plan</h3>
+      <p>
+        Get to at least 100 books requested through the ReRead website from at
+        least 15 different customers, at least 4 of which are total strangers
+        that I have had no contact with. Each customer requesting between 6 and
+        7 books on average. Achieve this by 15th September 2024.
+      </p>
 
-        <h2>ReRead's Plan to 100 Book Requests</h2>
-        <p id="author_date">19th August 2024</p>
-        <p>
-        This blog post was written after an existential ReRead crisis but I wanted to record where my mind was at
-        pre-19th August. It’s written in the present tense as if it were still the plan. Also as a side note, I’m
-        thinking about posting blog posts more frequently - to do this I’m going to proofread less - so things may not
-        make sense or flow as well. Open to thoughts and feedback (through any of ReRead’s social media).</p>
+      <p>
+        The 4 strangers would be for validating that it’s not just close friends
+        and family being “nice” and requesting books through ReRead. These 4
+        strangers are to be acquired through the poster and the short form video
+        posted on ReRead’s social media.
+      </p>
 
-        <h3>The short term plan</h3>
-        <p>        Get to at least 100 books requested through the ReRead website from at least 15 different customers, at least 4
-        of which are total strangers that I have had no contact with. Each customer requesting between 6 and 7 books on
-        average. Achieve this by 15th September 2024.</p>
-
-        
-
-<p>  The 4 strangers would be for validating that it’s not just close friends and family being “nice” and requesting
-        books through ReRead. These 4 strangers are to be acquired through the poster and the short form video posted on
-        ReRead’s social media.</p>
-      
-<p>        What I hope to achieve? This is to assess the hypotheses that:
-    <ol><li> People want to buy books from charity shops over online giants.</li>
+      What I hope to achieve? This is to assess the hypotheses that:
+      <ol>
+        <li>People want to buy books from charity shops over online giants.</li>
         <li>
-            People are happy to trade convenience/next-day delivery by sharing their want-to-read lists and sitting
-            tight.
-        </li>
-        <li>5% of books requested are available to purchase in local charity shops.</li>
-        <li>
-            The charity shops would be willing to reserve a book over a phone call (would be through an app notification
-            in the future) and hold it for the ReRead customer who requested the book
-        </li>
-        <li>
-            People are happy to go ahead and pay a £1 fee before finding out how much the charity shop is charging for
-            the book.
+          People are happy to trade convenience/next-day delivery by sharing
+          their want-to-read lists and sitting tight.
         </li>
         <li>
-            People will go and collect their books in reasonable times so the charity shops are not dealing with
-            overheads from managing a pile of reserved ReRead books
-        </li></ol>
-       </p>
+          5% of books requested are available to purchase in local charity
+          shops.
+        </li>
+        <li>
+          The charity shops would be willing to reserve a book over a phone call
+          (would be through an app notification in the future) and hold it for
+          the ReRead customer who requested the book
+        </li>
+        <li>
+          People are happy to go ahead and pay a £1 fee before finding out how
+          much the charity shop is charging for the book.
+        </li>
+        <li>
+          People will go and collect their books in reasonable times so the
+          charity shops are not dealing with overheads from managing a pile of
+          reserved ReRead books
+        </li>
+      </ol>
 
+      <h3>The logic behind using the book request format</h3>
+      <p>
+        By taking requests I do not need to build any complicated back ends. I
+        can go around charity shops talking photos of the shelves - this way, if
+        I get new requests, I can check photos to see if I’ve seen the book
+        before. While I am in the shop, I check the shelves against an
+        alphabetically ordered list of ReRead’s first 100 requested books (most
+        charity shops order their books alphabetically by authors last name,
+        however some seem to be grouped by colour for aesthetics - this is
+        mostly done in shops with only a few books but it does make finding the
+        books much harder.)
+      </p>
 
-        <h3>The logic behind using the book request format</h3>
-        <p>
-            By taking requests I do not need to build any complicated back ends. I can go around charity shops talking
-            photos of the shelves - this way, if I get new requests, I can check photos to see if I’ve seen the book before.
-            While I am in the shop, I check the shelves against an alphabetically ordered list of ReRead’s first 100
-            requested books (most charity shops order their books alphabetically by authors last name, however some seem to
-            be grouped by colour for aesthetics - this is mostly done in shops with only a few books but it does make
-            finding the books much harder.)
-        </p>
+      <img src="booksSortedByColour.jpeg" />
 
-        <img src="booksSortedByColour.jpeg">
+      <p>
+        Once I find a reserved book, I walk out of the charity shop, leaving the
+        book on the shelf (sounds counter intuitive).
+      </p>
 
-        <p>
-            Once I find a reserved book, I walk out of the charity shop, leaving the book on the shelf (sounds counter
-            intuitive).
-        </p>
+      <p>
+        I have spoken to some amazing Oxfam bookshop owners, they are happy to
+        take phone calls and search their shops for books. I would do this and
+        ask them to reserve the book (the one I just found myself in their shop)
+        and let them know that a ReRead customer will be around to collect it
+        soon. I then email the ReRead customer saying I have found their
+        request, checking they are still happy to pay the £1 fee. If they are,
+        then I take the £1 request fee payment and tell them where the book is
+        reserved so they can collect it and pay the charity for it.
+      </p>
 
-        <p>
-            I have spoken to some amazing Oxfam bookshop owners, they are happy to take phone calls and search their shops
-            for books. I would do this and ask them to reserve the book (the one I just found myself in their shop) and let
-            them know that a ReRead customer will be around to collect it soon. I then email the ReRead customer saying I
-            have found their request, checking they are still happy to pay the £1 fee. If they are, then I take the £1
-            request fee payment and tell them where the book is reserved so they can collect it and pay the charity for it.
-        </p>
-
-        <p>
-            This approach therefore relies heavily on marketing to build an initial customer base and 100 book requests. It
-            provides valuable learnings, testing assumptions about customers and their behaviours. The MVP is me, there is
-            no back end. I do the searching and there is little/no fancy scanning technology or database. The idea is to
-            learn as much as possible by doing as little as possible, as suggested by the book “The Lean Start-up”.
-        </p>
-<p>
-    
-            Back to present day me, I recently created a financial model and scoped out the request mechanisms. I’ve had
-            some serious thoughts about how scalable this request feature is as a revenue source for ReRead. I am now
-            thinking about working on something more technically involved over the next few months to create a more enticing
-            MVP (minimum viable product). Although I have not tested the hypotheses I have laid out above, I have just gone
-            over it again and again in my head. This is potentially not ideal and I may be “pivoting” without giving this a
-            proper go. The new MVP I am thinking about switching to would aim to delete the need to test many of the
-            hypotheses mentioned above as different (and hopefully fewer and smaller!) assumptions will be made. Maybe it’s
-            a bit like the saying “no part is the best part” but somehow translated to assumptions - “smaller and fewer
-            assumptions are the best assumptions” (??) - so catchy. To be continued..
-</p>
+      <p>
+        This approach therefore relies heavily on marketing to build an initial
+        customer base and 100 book requests. It provides valuable learnings,
+        testing assumptions about customers and their behaviours. The MVP is me,
+        there is no back end. I do the searching and there is little/no fancy
+        scanning technology or database. The idea is to learn as much as
+        possible by doing as little as possible, as suggested by the book “The
+        Lean Start-up”.
+      </p>
+      <p>
+        Back to present day me, I recently created a financial model and scoped
+        out the request mechanisms. I’ve had some serious thoughts about how
+        scalable this request feature is as a revenue source for ReRead. I am
+        now thinking about working on something more technically involved over
+        the next few months to create a more enticing MVP (minimum viable
+        product). Although I have not tested the hypotheses I have laid out
+        above, I have just gone over it again and again in my head. This is
+        potentially not ideal and I may be “pivoting” without giving this a
+        proper go. The new MVP I am thinking about switching to would aim to
+        delete the need to test many of the hypotheses mentioned above as
+        different (and hopefully fewer and smaller!) assumptions will be made.
+        Maybe it’s a bit like the saying “no part is the best part” but somehow
+        translated to assumptions - “smaller and fewer assumptions are the best
+        assumptions” (??) - so catchy. To be continued..
+      </p>
     </div>
-
-
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "split") {
-                x.className += " responsive";
-            } else {
-                x.className = "split";
-            }
-        }
-    </script>
-
-</body>
-
+  </body>
 </html>

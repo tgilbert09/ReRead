@@ -1,4 +1,3 @@
-<!doctype html>
 <html class="no-js" lang="">
   <head>
     <!-- COMMON HEAD START -->
@@ -32,7 +31,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <!-- COMMON HEAD END -->
-    <link rel="stylesheet" href="/css/posts.css" />
+    <link rel="stylesheet" href="css/request.css" />
   </head>
 
   <body>
@@ -59,43 +58,18 @@
     <script src="/navbar_script.js"></script>
     <!-- NAVBAR END -->
 
-    <div class="blogContent">
-      <h2>Prototype done!</h2>
-      <p id="author_date">25th September 2024</p>
+    <form class="search-container">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search charity shops for books.."
+      />
+      <button type="submit" id="searchButton" data-input-id="search-input">
+        Search
+      </button>
+    </form>
 
-      <p>
-        Two nights ago, on 23rd September, ReRead launched the "Library” of
-        charity shop books!! 🎉🎉🎉 Here’s what it looks like!
-      </p>
-
-      <img src="library_v1.jpg" />
-
-      <p>
-        While developing the back end, I used the same photo over and over
-        again. I’ve seen “Gerald Brenan, the Interior Castle” so many times now
-        😵‍💫. For some reason, Mask R-CNN (the machine learning model I am using
-        to detect and cut out books) always picked this book first, and now it’s
-        the first book on the website too!
-      </p>
-
-      <img src="first_image_scanned.jpg" />
-
-      <p>
-        There are many features still missing from the website, like a working
-        search bar - these will be coming soon! :)
-      </p>
-      <p>
-        It's been a while since my last blog post, but during that time, I’ve
-        learnt tons. I've been diving into Python, Javascript, Cloudflare (R1,
-        D1, Images), SQL databases, machine learning (PyTorch, Segment Anything
-        2, Mask R-CNN, text recognition) and even dabbling in a bit of Swift!
-        I’m having an amazing time and don’t want this to stop.
-      </p>
-
-      <p>
-        Next up.. I need to figure out a revenue model for ReRead so I can keep
-        this going long-term.
-      </p>
-    </div>
+    <div id="booksContainer"></div>
+    <script src="/search_bookdatabase.js"></script>
   </body>
 </html>

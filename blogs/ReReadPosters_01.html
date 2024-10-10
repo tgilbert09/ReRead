@@ -1,118 +1,151 @@
 <!doctype html>
 <html class="no-js" lang="">
+  <head>
+    <!-- COMMON HEAD START -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReRead</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReRead</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/posts.css">
-  <meta name="description" content="">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="ReRead's First Posters in Redland, Bristol - ReRead">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://re-read.co.uk/blogs/ReReadPosters_01">
-  <meta property="og:image" content="https://re-read.co.uk/blogs/ReReadPosters_0_ogImage.jpg">
-  <meta property="og:image:alt" content="ReRead Poster on wall in charity shop">
-  <meta property="og:description" content="At ReRead, we're on a mission to connect book lovers with hidden gems in local charity shops. Read about our latest initiative in Redland, Bristol." />
-  <meta property="og:site_name" content="ReRead" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fcfbf8" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-  <link rel="manifest" href="../site.webmanifest">
-  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#fcfbf8">
-  <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="theme-color" content="#fcfbf8">
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#fcfbf8" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
-    rel="stylesheet">
-  <meta name="theme-color" content="#fafafa">
-</head>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <!-- COMMON HEAD END -->
+    <link rel="stylesheet" href="/css/posts.css" />
 
-<body>
-  <div class="topnav">
-    <a href="../index.html"><img id="ReRead_logo" src="../ReReadLogo_Regular.svg" alt="ReRead's logo">
-      <h1>ReRead</h1>
-    </a>
-    <a href="javascript:void(0);" class='icon' onclick="myFunction()">
-      <div class="line"></div>
-      <div class="line"></div>
-    </a>
-    <div class="split" id="myTopnav">
-      <a href="../index.html">H<span>om</span>e</a>
-      <a href="../request.html">L<span>ibrar</span>y</a>
-      <a href="../blog.html">B<span>lo</span>g</a>
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="ReRead's First Posters in Redland, Bristol - ReRead"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://re-read.co.uk/blogs/ReReadPosters_01"
+    />
+    <meta
+      property="og:image"
+      content="https://re-read.co.uk/blogs/ReReadPosters_0_ogImage.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="ReRead Poster on wall in charity shop"
+    />
+    <meta
+      property="og:description"
+      content="At ReRead, we're on a mission to connect book lovers with hidden gems in local charity shops. Read about our latest initiative in Redland, Bristol."
+    />
+    <meta property="og:site_name" content="ReRead" />
+  </head>
+
+  <body>
+    <!-- NAVBAR START -->
+    <div class="topnav">
+      <a href="/index.html">
+        <img
+          id="ReRead_logo"
+          src="/ReReadLogo_Regular.svg"
+          alt="ReRead's logo"
+        />
+        <h1>ReRead</h1>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <div class="line"></div>
+        <div class="line"></div>
+      </a>
+      <div class="split" id="myTopnav">
+        <a href="/index.html">H<span>om</span>e</a>
+        <a href="/blog.html">B<span>lo</span>g</a>
+        <a href="/account.html"><div id="signIn">A<span>ccoun</span>t</div></a>
+      </div>
     </div>
-  </div>
+    <script src="/navbar_script.js"></script>
+    <!-- NAVBAR END -->
 
-  <div class="blogContent">
-    <h2>ReRead Posters in Redland, Bristol</h2>
-    <p id="author_date">17th August 2024</p>
-    <!--<h3>Exciting News for ReRead!</h3>-->
+    <div class="blogContent">
+      <h2>ReRead Posters in Redland, Bristol</h2>
+      <p id="author_date">17th August 2024</p>
+      <!--<h3>Exciting News for ReRead!</h3>-->
 
-    <p>Posters are up! At ReRead, we're on a mission to connect book lovers with the hidden gems they're looking for in
-      local charity shops. Today, we're excited to
-      kickstart our mission in Redland, Bristol.
-    </p>
-    <p>On August 16th, ReRead officially started searching for our first supporters, those early adopters who believe in
-      creating a sustainable, local, and charitable book discovery service (<a href="./howReReadWorks.html">learn about
-        how ReRead works ></a>). You can spot our new posters in two charity bookshops
-      in the Redland area: the <a href="https://maps.app.goo.gl/hoHoejUKKAKAuEui8">British Heart Foundation on
-        Whiteladies Road</a> and <a href="https://maps.app.goo.gl/bmHt4zuBbyjrksLa6">Oxfam on Cotham Hill</a>. This
-      marks the start of our journey to raise awareness about ReRead. It was super exciting to see
-      ReRead out in the wild for the first time!</p>
-    <img src="./ReReadPosters_0_onWall.png">
+      <p>
+        Posters are up! At ReRead, we're on a mission to connect book lovers
+        with the hidden gems they're looking for in local charity shops. Today,
+        we're excited to kickstart our mission in Redland, Bristol.
+      </p>
+      <p>
+        On August 16th, ReRead officially started searching for our first
+        supporters, those early adopters who believe in creating a sustainable,
+        local, and charitable book discovery service (<a
+          href="./howReReadWorks.html"
+          >learn about how ReRead works ></a
+        >). You can spot our new posters in two charity bookshops in the Redland
+        area: the
+        <a href="https://maps.app.goo.gl/hoHoejUKKAKAuEui8"
+          >British Heart Foundation on Whiteladies Road</a
+        >
+        and
+        <a href="https://maps.app.goo.gl/bmHt4zuBbyjrksLa6"
+          >Oxfam on Cotham Hill</a
+        >. This marks the start of our journey to raise awareness about ReRead.
+        It was super exciting to see ReRead out in the wild for the first time!
+      </p>
+      <img src="./ReReadPosters_0_onWall.png" />
 
-    <p>
-      We’re incredibly grateful to the local staff and volunteers at the <a href="https://www.bhf.org.uk">British Heart
-        Foundation</a> and <a href="https://www.oxfam.org.uk">Oxfam</a> for their
-      enthusiastic support of ReRead’s mission. These volunteers work to fight heart & circulatory conditions and combat
-      poverty & injustice worldwide 👏 If you’re in the area, be sure to check out these amazing shops! And while you’re
-      there, keep an eye out for our ReRead posters. Snap a pic and share it on social
-      media with #ReReadPosters to spread the word and connect with other book lovers!
-    </p>
-    <img src="./ReReadPosters_0.png">
-    <p>
-      The posters mirror the “look and feel” of our website. When customers scan
-      the QR code, they’ll be directed to our <a href="https://re-read.co.uk">site</a>, where they’ll be greeted by the
-      same cosy bookshop image — a
-      consistent visual experience that’s designed to build trust and enhance user engagement.
-    </p>
-    <p>
-      These posters are the beginning of our connection with the local community. By sharing our message in places we
-      love, we aim to inspire more like-minded people to join ReRead’s community. Next up: stay tuned for our upcoming
-      video-short, highlighting our sustainable book discovery service. It features the
-      unique charm of Bristol and its charity bookshops.
-    </p>
-    <p>
-      Help us build ReRead’s community, support these amazing charity shops, and be part of a movement that values
-      sustainability, local communities, and the joy of reading. <a href="../request.html">Request your first book
-        today</a> and join us on this
-      exciting journey!
-    </p>
-    </p>
-
-  </div>
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "split") {
-        x.className += " responsive";
-      } else {
-        x.className = "split";
-      }
-    }
-  </script>
-
-</body>
-
+      <p>
+        We’re incredibly grateful to the local staff and volunteers at the
+        <a href="https://www.bhf.org.uk">British Heart Foundation</a> and
+        <a href="https://www.oxfam.org.uk">Oxfam</a> for their enthusiastic
+        support of ReRead’s mission. These volunteers work to fight heart &
+        circulatory conditions and combat poverty & injustice worldwide 👏 If
+        you’re in the area, be sure to check out these amazing shops! And while
+        you’re there, keep an eye out for our ReRead posters. Snap a pic and
+        share it on social media with #ReReadPosters to spread the word and
+        connect with other book lovers!
+      </p>
+      <img src="./ReReadPosters_0.png" />
+      <p>
+        The posters mirror the “look and feel” of our website. When customers
+        scan the QR code, they’ll be directed to our
+        <a href="https://re-read.co.uk">site</a>, where they’ll be greeted by
+        the same cosy bookshop image — a consistent visual experience that’s
+        designed to build trust and enhance user engagement.
+      </p>
+      <p>
+        These posters are the beginning of our connection with the local
+        community. By sharing our message in places we love, we aim to inspire
+        more like-minded people to join ReRead’s community. Next up: stay tuned
+        for our upcoming video-short, highlighting our sustainable book
+        discovery service. It features the unique charm of Bristol and its
+        charity bookshops.
+      </p>
+      <p>
+        Help us build ReRead’s community, support these amazing charity shops,
+        and be part of a movement that values sustainability, local communities,
+        and the joy of reading.
+        <a href="../request.html">Request your first book today</a> and join us
+        on this exciting journey!
+      </p>
+    </div>
+  </body>
 </html>
