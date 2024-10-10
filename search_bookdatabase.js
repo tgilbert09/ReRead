@@ -203,7 +203,7 @@ function booksJsonToHtml(books) {
     bookInfo.appendChild(googleBooksLink);
 
     imageUrl =
-      "https://re-read.co.uk/request/bookdatabase/image?bookId=" +
+      "https://re-read.co.uk/image?bookId=" +
       book["BookId"];
     const imgElement = document.createElement("img");
     imgElement.src = imageUrl;
