@@ -11,8 +11,8 @@ h1 {
   text-align: center;
 }
 
-input[type="text"] {
-  width: calc(100% - 22px);
+input[type="search"] {
+  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
