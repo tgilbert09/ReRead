@@ -9,14 +9,14 @@ const firebaseConfig = {
 };
 const app = firebase.initializeApp(firebaseConfig);
 
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", searchButtonClickedFunction);
+
 searchInput = document.getElementById("search-input");
 const urlParams = new URL(window.location.href).searchParams;
 const query = urlParams.get("query");
 searchInput.value = query;
 booksJson = requestFromD1(query);
-
-const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click", searchButtonClickedFunction);
 
 function searchButtonClickedFunction(event) {
   event.preventDefault();
@@ -55,7 +55,7 @@ function requestFromD1(query = "") {
       try {
         booksJsonResponse = await fetch(searchAPIURL);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
     try {
@@ -90,8 +90,6 @@ function timeAgo(dateString) {
 }
 
 function booksJsonToHtml(books) {
-  console.log("in html maker", books);
-
   // Get the parent node
   var parentNode = document.querySelector("body");
 
@@ -101,13 +99,14 @@ function booksJsonToHtml(books) {
     bookDiv.remove();
   });
 
-  console.log(books);
   if (books === undefined || books.length == 0) {
     // array does not exist or is empty
     const bookDiv = document.createElement("h3");
     bookDiv.setAttribute("class", "book");
+    const urlParams = new URL(window.location.href).searchParams;
+    const query = urlParams.get("query");
     bookDiv.innerHTML =
-      `<p>No results found - check back again soon or <a href="/account">add a book to your wishlist</a> to get notified when it's found!</p>`;
+      `<p>No results found for "${query}" - check back again soon or <a href="/account">add a book to your wishlist</a> to get notified when it's found!</p>`;
     parentNode.appendChild(bookDiv);
     return;
   }
@@ -133,8 +132,6 @@ function booksJsonToHtml(books) {
     }
     bookInfo.appendChild(scannedText);
 
-    const urlParams = new URL(window.location.href).searchParams;
-    const query = urlParams.get("query");
     // Highlight matching text
     if (query) {
       const regex = new RegExp(`(${query})`, "gi"); // Create a regex for case-insensitive matching
