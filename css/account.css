@@ -143,6 +143,10 @@ button.in-wishlist:hover {
   background-color: darkgrey; /* A subtle hover effect */
 }
 
+#faq-p {
+  text-align: left;
+}
+
 #sign-out-btn {
   max-width: 150px;
   margin-bottom: 10px;
