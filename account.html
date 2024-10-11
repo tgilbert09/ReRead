@@ -102,12 +102,14 @@
         <p id="faq-p" class="display-if-signed-in">
           Multiple books? <a href="/blogs/faqs">FAQs &gt;</a>
         </p>
-        <input
-          type="search"
-          id="search-input"
-          placeholder="Search for books..."
-        />
-        <button id="search-button">Search</button>
+        <form id="search-form">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search for books..."
+          />
+          <button type="submit" id="search-button">Search</button>
+        </form>
 
         <div id="results"></div>
       </div>

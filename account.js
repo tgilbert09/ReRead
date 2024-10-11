@@ -12,6 +12,7 @@ const app = firebase.initializeApp(firebaseConfig);
 document.getElementById("search-button").addEventListener("click", searchBooks);
 
 async function searchBooks() {
+  event.preventDefault(); // Prevent the default form submission (page reload)
   const query = document.getElementById("search-input").value;
   const apiKey = "YOUR_GOOGLE_BOOKS_API_KEY"; // Replace with your API key
   const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}`;
