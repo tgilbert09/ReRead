@@ -236,7 +236,7 @@ firebase.auth().onAuthStateChanged((user) => {
     const userSubscriptionStatus = document.getElementById(
       "user-subscription-status",
     );
-    userSubscriptionStatus.innerHTML = `<p>You are currently unsubscribed. Subscribe for £0.79 a month to get: </p><ol><li>Instant notifications when a book in your Wishlist is found.</li><li>Unlimited access to book locations.</li></ol><p>Check out what you're missing!</p>`; // Display user email or UID
+    userSubscriptionStatus.innerHTML = `<p>You are currently unsubscribed. Subscribe for £0.79 a month to get: </p><ol><li>Instant notifications when a book in your Wishlist is found.</li><li>Unlimited access to book locations.</li></ol>`; // Display user email or UID
 
     const db = firebase.firestore();
     const wishlistContainer = document.getElementById("wishlist-container");
