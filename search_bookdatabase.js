@@ -106,8 +106,8 @@ function booksJsonToHtml(books) {
     // array does not exist or is empty
     const bookDiv = document.createElement("h3");
     bookDiv.setAttribute("class", "book");
-    bookDiv.textContent =
-      "No results found - check back again soon or request a book!";
+    bookDiv.innerHTML =
+      `<p>No results found - check back again soon or <a href="/account">add a book to your wishlist</a> to get notified when it's found!</p>`;
     parentNode.appendChild(bookDiv);
     return;
   }
