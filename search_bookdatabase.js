@@ -166,26 +166,16 @@ function booksJsonToHtml(books) {
 
     const bookLocation = document.createElement("a");
     if (!("Location" in book)) {
-      console.log("Key 'Location' does not exist.");
       bookLocation.setAttribute("href", "/account");
       bookLocation.textContent =
         "Sign in to see which charity shop this book is in!";
     } else {
-      console.log(book["Location"]);
-      let bookLocationString = "";
-      if (book["Location"] === "4PYLziyxT1ASxtRSA") {
-        bookLocationString = "British Heart Foundation - Whiteladies Road";
-      } else if (book["Location"] === "ECwQXoWCDUHGarRz5") {
-        bookLocationString = "Oxfam - Cotham Hill";
-      } else {
-        bookLocationString = book["Location"];
-      }
       bookLocation.setAttribute(
         "href",
         "https://maps.app.goo.gl/" + book["Location"],
       );
       bookLocation.setAttribute("target", "_blank");
-      bookLocation.textContent = "From " + bookLocationString;
+      bookLocation.textContent = "From " + book["ShopName"];
     }
     bookInfo.appendChild(bookLocation);
 
