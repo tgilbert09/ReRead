@@ -99,14 +99,14 @@ function booksJsonToHtml(books) {
     bookDiv.remove();
   });
 
+  const urlParams = new URL(window.location.href).searchParams;
+  const query = urlParams.get("query");
+
   if (books === undefined || books.length == 0) {
     // array does not exist or is empty
     const bookDiv = document.createElement("h3");
     bookDiv.setAttribute("class", "book");
-    const urlParams = new URL(window.location.href).searchParams;
-    const query = urlParams.get("query");
-    bookDiv.innerHTML =
-      `<p>No results found for "${query}" - check back again soon or <a href="/account">add a book to your wishlist</a> to get notified when it's found!</p>`;
+    bookDiv.innerHTML = `<p>No results found for "${query}" - check back again soon or <a href="/account">add a book to your wishlist</a> to get notified when it's found!</p>`;
     parentNode.appendChild(bookDiv);
     return;
   }
@@ -189,9 +189,7 @@ function booksJsonToHtml(books) {
     googleBooksLink.textContent = "Google Books >";
     bookInfo.appendChild(googleBooksLink);
 
-    imageUrl =
-      "https://re-read.co.uk/image?bookId=" +
-      book["BookId"];
+    imageUrl = "https://re-read.co.uk/image?bookId=" + book["BookId"];
     const imgElement = document.createElement("img");
     imgElement.src = imageUrl;
     imgElement.alt = book["ScannedText"];
